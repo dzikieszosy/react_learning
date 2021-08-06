@@ -1,7 +1,7 @@
 class App extends React.Component {
   state = {
-    counter: 0
-  }
+    counter: 0,
+  };
   render() {
     return (
       <div>
@@ -11,5 +11,4 @@ class App extends React.Component {
   }
 }
 
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById("root"));
