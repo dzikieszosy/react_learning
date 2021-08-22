@@ -1,16 +1,30 @@
 //Przycisk - po kliknięciu dodawana jest litera do tekstu
 class App extends React.Component {
-  state = {
-    text: "",
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "",
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  // state = {
+  //   text: "",
+  // };
 
-  handleClick = () => {
+  handleClick() {
     // alert(this.state.text);
     const letter = "A";
-    this.setState({
-      text: this.state.text + letter,
+
+    // this.setState({
+    //   text: this.state.text + letter,
+    // });
+
+    this.setState((prevState) => {
+      return {
+        text: this.state.text + letter,
+      };
     });
-  };
+  }
   render() {
     return (
       <>
