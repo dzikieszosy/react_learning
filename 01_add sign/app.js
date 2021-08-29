@@ -13,7 +13,7 @@ class App extends React.Component {
 
   handleClick() {
     // alert(this.state.text);
-    const letter = "A";
+    const number = Math.floor(Math.random() * 10);
 
     // this.setState({
     //   text: this.state.text + letter,
@@ -21,14 +21,14 @@ class App extends React.Component {
 
     this.setState((prevState) => {
       return {
-        text: this.state.text + letter,
+        text: this.state.text + number,
       };
     });
   }
   render() {
     return (
       <>
-        <button onClick={this.handleClick}>Dodaj "A"</button>
+        <button onClick={this.handleClick}>Losuj od 1 do 9</button>
         <h1>{this.state.text}</h1>
       </>
     );

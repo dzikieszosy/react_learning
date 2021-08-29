@@ -1,0 +1,14 @@
+body {
+  background: #333;
+  color: #ccc;
+}
+.red {
+  color: red;
+}
+
+.big {
+  font-size: 30px;
+}
+button {
+  font-size: x-large;
+}
