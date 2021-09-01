@@ -1,0 +1,24 @@
+body {
+  text-align: center;
+  overflow: hidden;
+  background: #333;
+  color: #ccc;
+  font-family: ubuntu;
+}
+
+.title {
+  font-family: arial;
+  padding: 30px;
+  font-size: 50px;
+}
+input[type="text"],
+button {
+  padding: 10px 30px;
+  border: black 2px solid;
+  font-size: 30px;
+  outline: none;
+}
+p {
+  font-size: 1.3em;
+  font-family: ubuntu;
+}
