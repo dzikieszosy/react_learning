@@ -5,7 +5,7 @@ class Counter extends React.Component {
   };
 
   handleMathClick = (type, number = 1) => {
-    if (type === "substraction") {
+    if (type === "subtraction") {
       this.setState((prevState) => ({
         count: prevState.count + 1,
         result: prevState.result - number,
@@ -26,10 +26,10 @@ class Counter extends React.Component {
   render() {
     return (
       <>
-        {/* <button onClick={this.handleMathClick.bind(this, "substraction", 10)}>
+        {/* <button onClick={this.handleMathClick.bind(this, "subtraction", 10)}>
           -10
         </button>
-        <button onClick={() => this.handleMathClick("substraction")}>-1</button>
+        <button onClick={() => this.handleMathClick("subtraction")}>-1</button>
         <button onClick={this.handleMathClick.bind(this, "reset")}>
           Reset
         </button>
@@ -42,13 +42,13 @@ class Counter extends React.Component {
         <MathButton
           name="-10"
           number="10"
-          type="substraction"
+          type="subtraction"
           click={this.handleMathClick}
         />
         <MathButton
           name="-1"
           number="1"
-          type="substraction"
+          type="subtraction"
           click={this.handleMathClick}
         />
         <MathButton
