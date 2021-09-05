@@ -89,7 +89,7 @@ const ResultPanel = (props) => {
     <React.Fragment>
       <h1>
         Liczba kliknięć: {props.count}{" "}
-        {props.count > 10 ? <span>. - Przeciążenie procesora!</span> : null}
+        {props.count > 10 ? <span> - Przeciążenie procesora!</span> : null}
       </h1>
       <h1>Wynik: {props.result}</h1>
     </React.Fragment>
