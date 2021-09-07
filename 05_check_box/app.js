@@ -1,5 +1,7 @@
-const PositiveMessage = () => <p>Możesz obejrzeć film. Zapraszamy!</p>;
-const NegativeMessage = () => <p>Nie możesz obejrzeć tego filmu...</p>;
+const ValidationMessage = (props) => <p>{props.txt}</p>;
+
+// const PositiveMessage = () => <p>Możesz obejrzeć film. Zapraszamy!</p>;
+// const NegativeMessage = () => <p>Nie możesz obejrzeć tego filmu...</p>;
 
 class TicketShop extends React.Component {
   state = {
@@ -17,9 +19,9 @@ class TicketShop extends React.Component {
   displayMessage = () => {
     if (this.state.isFormSubmitted) {
       if (this.state.isConfirmed) {
-        return <PositiveMessage />;
+        return <ValidationMessage txt="Możesz obejrzeć film. Zapraszamy!" />;
       } else {
-        return <NegativeMessage />;
+        return <ValidationMessage txt="Nie możesz obejrzeć tego filmu..." />;
       }
     } else {
       return null;
@@ -36,6 +38,8 @@ class TicketShop extends React.Component {
   };
   render() {
     //  console.log(this.state.isConfirmed);
+    const { isConfirmed } = this.state; //pobiera obiekt this.state a z niego tylko właściwość isConfirmed
+
     return (
       <>
         <h1>Kup bilet na horror roku!</h1>
@@ -44,7 +48,7 @@ class TicketShop extends React.Component {
             type="checkbox"
             id="age"
             onChange={this.handleCheckboxChange}
-            checked={this.state.isConfirmed}
+            checked={isConfirmed}
           />
           <label htmlFor="age">Mam co najmniej 16 lat</label>
           <br /> <br />
