@@ -30,16 +30,27 @@ const data = {
 const Item = ({ user }) => (
   <div className="userInfo">
     <h1>{user.name}</h1>
-    <p>Informacje o użytkowniku</p>
+    <p>Informacje o użytkowniku -</p>
     <p>
       Wiek użytkownika: <strong>{user.age}</strong>
     </p>
-    <p>Płeć użytkownika: {user.sex}</p>
+    <p>
+      Płeć: <strong>{user.sex}</strong>
+    </p>
   </div>
 );
+
 class ListItems extends React.Component {
+  // state = {
+  //   items: ["jabłko", "śliwka", "gruszka"],
+  // };
   state = {
     select: "all",
+  };
+  usersList = () => {
+    let users = this.props.data.users;
+    users = users.map((user) => <Item user={user} key={user.id} />);
+    return users;
   };
 
   handleUsersFilter(option) {
@@ -63,6 +74,7 @@ class ListItems extends React.Component {
         return "coś się zepsuło";
     }
   };
+
   render() {
     return (
       <div>
@@ -76,9 +88,12 @@ class ListItems extends React.Component {
           Mężczyźni
         </button>
         {this.usersList()}
+        {/* {[<Items />, <Items />, <Items />]} */}
       </div>
     );
   }
 }
 
 ReactDOM.render(<ListItems data={data} />, document.getElementById("root"));
+
+//cień i kość
