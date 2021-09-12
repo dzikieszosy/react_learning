@@ -9,11 +9,21 @@ class App extends React.Component {
       shoppingCart: this.state.shoppingCart - 1,
     });
   };
+
   handleAddFromCart = () => {
     this.setState({
       shoppingCart: this.state.shoppingCart + 1,
     });
   };
+
+  handleBuy = () => {
+    // console.log("kupione");
+    this.setState({
+      availableProducts: this.state.availableProducts - this.state.shoppingCart,
+      shoppingCart: 0,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -30,6 +40,11 @@ class App extends React.Component {
         >
           +
         </button>
+        {this.state.shoppingCart > 0 && (
+          <button onClick={this.handleBuy}>Kup</button>
+        )}
+        {/* show only if
+        shoppingCart > 0 */}
       </div>
     );
   }
