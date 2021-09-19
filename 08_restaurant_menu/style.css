@@ -50,3 +50,10 @@ li:nth-child(even) {
 li:nth-child(odd) {
   background-color: #555;
 }
+
+.enabled {
+  font-weight: bold;
+}
+.disabled {
+  color: gray;
+}
