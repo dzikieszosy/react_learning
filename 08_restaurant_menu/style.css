@@ -4,6 +4,7 @@ body {
   background: #333;
   color: #ccc;
   font-family: ubuntu;
+  /* font-size: 20px; */
 }
 
 .title {
@@ -37,4 +38,15 @@ p {
 div {
   line-height: 50px;
   font-size: 30px;
+}
+li {
+  line-height: 120%;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+li:nth-child(even) {
+  background-color: #444;
+}
+li:nth-child(odd) {
+  background-color: #555;
 }
