@@ -1,0 +1,41 @@
+body {
+  /* text-align: center; */
+  overflow: hidden;
+  background: #333;
+  color: #ccc;
+  font-family: ubuntu;
+}
+
+.title {
+  font-family: arial;
+  padding: 30px;
+  /* font-size: 50px; */
+}
+input[type="text"],
+input[type="email"],
+button {
+  margin: 0px 10px;
+  /* padding: 10px 30px; */
+  border: black 2px solid;
+  background-color: #fff;
+  /* font-size: 30px; */
+  font-weight: bold;
+  min-width: 50px;
+  /* height: 50px; */
+  cursor: pointer;
+  outline: none;
+}
+button:disabled {
+  opacity: 0.3;
+}
+button:active {
+  opacity: 0.7;
+}
+p {
+  /* font-size: 1.3em; */
+  font-family: ubuntu;
+}
+div {
+  line-height: 50px;
+  /* font-size: 30px; */
+}
